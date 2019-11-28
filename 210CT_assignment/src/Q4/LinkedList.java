@@ -3,15 +3,54 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Q3.part2;
+package Q4;
+
+import Q3.*;
 
 /**
  *
  * @author wai
  */
+class ListNode{
+    private Object data;
+    private ListNode next;
+    
+    public ListNode(Object o){
+        data = o;
+        next = null;
+    }
+    
+    public ListNode(Object o, ListNode nextNode){
+        data = o;
+        next = nextNode;
+    }
+    
+    public Object getData(){
+        return data;
+    }
+    
+    public void setData(Object o){
+        data = o;
+    }
+    
+    public ListNode getNext(){
+        return next;
+    }
+    
+    public void setNext(ListNode next){
+        this.next=next;
+    }
+}
+
+class EmptyListException extends RuntimeException{
+    public EmptyListException(){
+        super("List is empty");
+    }
+}
+
 public class LinkedList {
-    protected ListNode head;
-    protected ListNode tail;
+    private ListNode head;
+    private ListNode tail;
     public LinkedList() { head = tail = null; }
     public boolean isEmpty() { return head == null; }
     public void addToHead(Object item) {

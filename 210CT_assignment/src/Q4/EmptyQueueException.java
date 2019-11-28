@@ -9,6 +9,8 @@ package Q4;
  *
  * @author wai
  */
-public class EmptyQueueException {
-    
+public class EmptyQueueException extends RuntimeException{
+    public EmptyQueueException () {
+        super("Queue is empty");
+    }
 }

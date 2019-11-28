@@ -9,6 +9,8 @@ package Q4;
  *
  * @author wai
  */
-public class QueueFullException {
-    
+public class QueueFullException extends RuntimeException{
+    public QueueFullException(){
+        super("Queue is full.");
+    }
 }
