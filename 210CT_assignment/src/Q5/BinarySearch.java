@@ -12,11 +12,14 @@ package Q5;
 public class BinarySearch {
     public static void binarySearch(int arr[], int first, int last, int key) {
         int mid = (first + last) / 2;
+        int count = 0;
         while (first <= last) {
             if (arr[mid] < key) {
+                count++;
                 first = mid + 1;
             } else if (arr[mid] == key) {
-                System.out.println("The number of comparison is " + mid + " by using binary search algorithm.");
+                count++;
+                System.out.println("The number of comparison is " + count + " by using binary search algorithm.");
                 break;
             } else {
                 last = mid - 1;

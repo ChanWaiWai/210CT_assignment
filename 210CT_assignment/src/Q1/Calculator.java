@@ -10,7 +10,7 @@ package Q1;
  * @author chanwai
  */
 public class Calculator extends javax.swing.JFrame {
-
+    int count = 0;
     /**
      * Creates new form Calculator
      */

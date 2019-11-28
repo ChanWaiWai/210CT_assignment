@@ -11,8 +11,8 @@ package Q4;
  */
 public class TestQueue {
     public static void main(String[] args) {
-        ArrayQueue q = new ArrayQueue(20);
-        byte barray[] = new byte[20];
+        ArrayQueue q = new ArrayQueue(99);
+        byte barray[] = new byte[99];
         int n;
         do {
                 n = SimpleInput.getInteger("How many to enqueue? ");

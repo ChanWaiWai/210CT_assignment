@@ -58,7 +58,7 @@ public class BinarySearchTree {
     }
     
     private void visit(BinaryNode t) {
-      System.out.print(Integer.toString(t.data));
+      System.out.print(Integer.toString(t.data) + " ");
     }
     
     public void preorder() {

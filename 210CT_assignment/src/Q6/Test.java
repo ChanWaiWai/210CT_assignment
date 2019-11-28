@@ -14,9 +14,11 @@ public class Test {
         int count = 10;
         Fibonacci fi= new Fibonacci();
         BinarySearchTree bst = new BinarySearchTree();
+        System.out.println("Fibonacci series ");
         System.out.print("0");
         fi.printFibonacci(count -1);
         
+        System.out.println();
         System.out.println();
         
         System.out.print("Inserting:");

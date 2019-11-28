@@ -40,6 +40,6 @@ public class Circle extends Shape{
     }
     
     public String toString(){
-        return name + ": Center = " + center + "; Radius" +radius;
+        return name + ": Center = " + center + "; Radius = " +radius;
     }
 }

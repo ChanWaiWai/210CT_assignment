@@ -20,10 +20,10 @@ public class TestHeapSort {
         
         HeapSort hs = new HeapSort(); 
         hs.heapSort(seq); 
-  
+        System.out.println();
         System.out.println("Array after Heap Sort"); 
         hs.printArray(seq); 
-        
+        System.out.println();
         BubbleSort bs = new BubbleSort();
         bs.bubbleSort(seq);
         System.out.println("Array after Bubble Sort"); 

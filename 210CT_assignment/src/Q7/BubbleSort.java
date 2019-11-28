@@ -10,11 +10,13 @@ package Q7;
  * @author ChanWai
  */
 public class BubbleSort {
+    static int count = 0;
     public static void bubbleSort(int[] seq){
         int length = seq.length;
         int temp = 0;
         for(int i=0; i<length; i++){
             for(int j=1; j<(length-i); j++){
+                count++;
                 if(seq[j-1] > seq[j]){
                     temp = seq[j-1];
                     seq[j-1] = seq[j];
@@ -29,5 +31,6 @@ public class BubbleSort {
             System.out.print(seq[i] + " ");
         }
         System.out.println();
+        System.out.println("The total number of comparisons from Bubble sort is: " + count);
     }
 }

@@ -10,14 +10,17 @@ package Q7;
  * @author ChanWai
  */
 public class HeapSort {
+    static int count = 0;
     public void heapSort(int seq[]){
         int length = seq.length;
         
         for (int i=length/2-1; i>= 0; i--){
+            count++;
             heapify(seq, length, i);
         }
         
         for (int i=length-1; i>=0; i--){
+            count++;
             int temp = seq[0];
             seq[0] = seq[i];
             seq[i] = temp;
@@ -31,12 +34,15 @@ public class HeapSort {
         int r = 2*i +2;
         
         if(l<n && seq[l] > seq[largest]){
+            count++;
             largest = l;
         }
         if(r < n && seq[r] > seq[largest]){
+            count++;
             largest = r; 
         }
         if(largest != i){
+            count++;
             int swap = seq[i];
             seq[i] = seq[largest];
             seq[largest] = swap;
@@ -49,5 +55,6 @@ public class HeapSort {
             System.out.print(seq[i]+" "); 
         }
         System.out.println(); 
+        System.out.println("The total number of comparisons from Heap sort is: " + count);
     }
 }

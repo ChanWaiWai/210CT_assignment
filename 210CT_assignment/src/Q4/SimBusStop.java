@@ -66,8 +66,11 @@ public class SimBusStop {
             System.out.println("Total " + busCount + " passed the bus stop.");
             System.out.println("Average " + (float)busCap/people + " people can got on a bus.");
             System.out.println("Average " + (float)vacantSeats/busCount + " vacant seats for a bus leaving the bus stop.");
-            System.out.println (currentPeople + " people still waiting at the bus stop, average waiting time = " +
-                                        (float) wait/currentPeople + " minutes.");
+            if(currentPeople == 0){
+                System.out.println (currentPeople + " people still waiting at the bus stop, average waiting time = 0 minutes.");
+            }else{
+                System.out.println (currentPeople + " people still waiting at the bus stop, average waiting time = " + (float) wait/currentPeople + " minutes.");
+            }
         }
     }
 }
